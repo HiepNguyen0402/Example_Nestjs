@@ -13,7 +13,10 @@ export const AppDataSource = new DataSource({
     
     logging: true,
     synchronize: true,
-     migrations: [__dirname + '/../database/migrations/*{.ts,.js}'],
+    // migrations: [__dirname + '/../database/migrations/*{.ts,.js}'],
+    // migrationsTableName: "migrations",
+    // migrationsRun: true,
+    migrations: ['src/migrations/*.ts'],
 });
 
 AppDataSource.initialize()
